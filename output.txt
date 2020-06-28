@@ -1,9 +1,0 @@
-Total {
-    confirmed,
-    deaths,
-    recovered,
-    excluded
-}
-regions {
-    confirmed,
-}
