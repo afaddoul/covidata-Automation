@@ -6,6 +6,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from pprint import pprint
 
+
 def regions_cases_scraper():
     # Set target URL
     url = 'https://covid.hespress.com/'
@@ -38,58 +39,16 @@ def regions_cases_scraper():
         },
         "data": [
             {
-                "region_name_en": "Casablanca-Settat",
-                "region_code": "MA06",
-                "region_name_ar": "الدار البيضاء - سطات",
-                "confirmed": lst[0]
-            },
-            {
-                "region_name_en": "Laâyoune-Sakia El Hamra",
-                "region_code": "MA11",
-                "region_name_ar": "العيون - الساقية الحمراء",
-                "confirmed": lst[1]
-            },
-            {
-                "region_name_en": "Tanger-Tétouan-Al Hoceïma",
-                "region_code": "MA01",
-                "region_name_ar": "طنجة - تطوان - الحسيمة",
-                "confirmed": lst[2]
-            },
-            {
-                "region_name_en": "Fès-Meknès",
-                "region_code": "MA03",
-                "region_name_ar": "فاس - مكناس",
-                "confirmed": lst[3]
-            },
-            {
-                "region_name_en": "Marrakech-Safi",
-                "region_code": "MA07",
-                "region_name_ar": "مراكش - أسفي",
-                "confirmed": lst[4]
-            },
-            {
-                "region_name_en": "Rabat-Salé-Kénitra",
-                "region_code": "MA04",
-                "region_name_ar": "الرباط - سلا - القنيطرة",
-                "confirmed": lst[5]
-            },
-            {
                 "region_name_en": "Béni Mellal-Khénifra",
                 "region_code": "MA05",
                 "region_name_ar": "بني ملال - خنيفرة",
                 "confirmed": lst[6]
             },
             {
-                "region_name_en": "Dakhla-Oued Ed-Dahab",
-                "region_code": "MA12",
-                "region_name_ar": "الداخلة - وادي الذهب",
-                "confirmed": lst[7]
-            },
-            {
-                "region_name_en": "Guelmim-Oued Noun",
-                "region_code": "MA10",
-                "region_name_ar": "كلميم - واد نون",
-                "confirmed": lst[8]
+                "region_name_en": "Casablanca-Settat",
+                "region_code": "MA06",
+                "region_name_ar": "الدار البيضاء - سطات",
+                "confirmed": lst[0]
             },
             {
                 "region_name_en": "Drâa-Tafilalet",
@@ -98,17 +57,58 @@ def regions_cases_scraper():
                 "confirmed": lst[9]
             },
             {
+                "region_name_en": "Dakhla-Oued Ed-Dahab",
+                "region_code": "MA12",
+                "region_name_ar": "الداخلة - وادي الذهب",
+                "confirmed": lst[7]
+            },
+            {
+                "region_name_en": "Fès-Meknès",
+                "region_code": "MA03",
+                "region_name_ar": "فاس - مكناس",
+                "confirmed": lst[3]
+            },
+            {
+                "region_name_en": "Guelmim-Oued Noun",
+                "region_code": "MA10",
+                "region_name_ar": "كلميم - واد نون",
+                "confirmed": lst[8]
+            },
+            {
+                "region_name_en": "Laâyoune-Sakia El Hamra",
+                "region_code": "MA11",
+                "region_name_ar": "العيون - الساقية الحمراء",
+                "confirmed": lst[1]
+            },
+            {
+                "region_name_en": "Marrakech-Safi",
+                "region_code": "MA07",
+                "region_name_ar": "مراكش - أسفي",
+                "confirmed": lst[4]
+            },
+            {
                 "region_name_en": "l'Oriental",
                 "region_code": "MA02",
                 "region_name_ar": "الجهة الشرقية",
                 "confirmed": lst[10]
             },
-
+            {
+                "region_name_en": "Rabat-Salé-Kénitra",
+                "region_code": "MA04",
+                "region_name_ar": "الرباط - سلا - القنيطرة",
+                "confirmed": lst[5]
+            },
             {
                 "region_name_en": "Souss-Massa",
                 "region_code": "MA09",
                 "region_name_ar": "سوس - ماسة",
                 "confirmed": lst[11]
+            },
+            {
+                "region_name_en": "Tanger-Tétouan-Al Hoceïma",
+                "region_code": "MA01",
+                "region_name_ar": "طنجة - تطوان - الحسيمة",
+                "confirmed": lst[2]
             },
         ]
     }
