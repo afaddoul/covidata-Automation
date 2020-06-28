@@ -1,10 +1,10 @@
+from scraping_scripts import total_cases_scraper as total
+from scraping_scripts import regions_cases_scraper as regions
 from datetime import datetime
 from pprint import pprint
 import json
 import sys
 sys.path.insert(0, '/Users/q-beast/Desktop/covidata-Automation')
-from scraping_scripts import regions_cases_scraper as regions
-from scraping_scripts import total_cases_scraper as total
 
 # set json file name
 json_file = '../json_output/data_by_regions.json'
@@ -13,11 +13,9 @@ json_file = '../json_output/data_by_regions.json'
 with open(json_file) as f:
     json_regions = json.load(f)
 
+# Get dicts
 regions_cases_dict = regions.regions_cases_scraper()
 total_cases_dict = total.total_cases_scraper()
-
-# pprint(total_cases_dict)
-# pprint(json_regions['data'])
 
 # Update total country cases
 json_regions['data']['country'][0]['confirmed'] = total_cases_dict['data']['total_confirmed']
@@ -40,9 +38,11 @@ json_regions['data']['regions'][10]['confirmed'] = regions_cases_dict['data'][10
 json_regions['data']['regions'][11]['confirmed'] = regions_cases_dict['data'][11]['confirmed']
 
 # Update updating time
-update_date = str(regions_cases_dict['date']['update_hour']) + ' ' + str(regions_cases_dict['date']['update_day']) + '-' + str(datetime.today().month) + '-' + str(datetime.today().year)
+update_date = str(regions_cases_dict['date']['update_hour']) + ' ' + str(regions_cases_dict['date']
+                                                                         ['update_day']) + '-' + str(datetime.today().month) + '-' + str(datetime.today().year)
 json_regions['last_updated'] = update_date
 
+# Create updated json file
 f = open("output.json", "w")
 json.dump(json_regions, f, indent=4, sort_keys=True, ensure_ascii=False)
 f.close()

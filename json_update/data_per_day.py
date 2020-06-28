@@ -1,10 +1,10 @@
+from scraping_scripts import daily_cases_scraper as daily
+from scraping_scripts import total_cases_scraper as total
 from datetime import datetime
 from pprint import pprint
 import json
 import sys
 sys.path.insert(0, '/Users/q-beast/Desktop/covidata-Automation')
-from scraping_scripts import total_cases_scraper as total
-from scraping_scripts import daily_cases_scraper as daily
 
 # Set json file name
 json_file = '../json_output/data_per_day.json'
@@ -30,5 +30,5 @@ json_days['data'].append(last_updated_elm)
 # Create updated json
 f = open("output.json", "w")
 json.dump(json_days, f, indent=4,
-                           sort_keys=True, ensure_ascii=False)
+          sort_keys=True, ensure_ascii=False)
 f.close()
