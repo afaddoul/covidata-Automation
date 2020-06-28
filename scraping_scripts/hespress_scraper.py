@@ -6,6 +6,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from pprint import pprint
 
+# Set target URL
 url = 'https://covid.hespress.com/'
 
 # Get html Source code

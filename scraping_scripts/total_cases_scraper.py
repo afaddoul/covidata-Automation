@@ -6,6 +6,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from pprint import pprint
 
+
 def total_cases_scraper():
     # Set target URL
     url = 'https://covid.hespress.com/'
@@ -47,4 +48,3 @@ def total_cases_scraper():
         }
     }
     return total_properties
-
