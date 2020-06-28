@@ -19,12 +19,10 @@ def daily_cases_scraper():
     lst = []
     for row in rows:
         row = row.text.replace("i>", "").split()[0]
-        print(row, '\n')
         if (row.isnumeric()):
             lst.append(int(row))
         else:
             lst.append(0)
-    print(lst)
     # Get total Update date
     rows = soup.findAll('span', attrs={'class': 'font-13'})
     row = rows[0].text.split()
@@ -44,5 +42,3 @@ def daily_cases_scraper():
         }
     }
     return daily_properties
-
-pprint(daily_cases_scraper())
