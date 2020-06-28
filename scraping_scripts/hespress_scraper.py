@@ -8,7 +8,7 @@ from pprint import pprint
 
 url = 'https://covid.hespress.com/'
 
-# Get Page
+# Get html Source code
 response = requests.get(url)
 soup = bs(response.text, 'html.parser')
 
