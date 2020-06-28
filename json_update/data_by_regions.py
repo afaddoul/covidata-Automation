@@ -6,8 +6,6 @@ sys.path.insert(0, '/Users/q-beast/Desktop/covidata-Automation')
 from scraping_scripts import regions_cases_scraper as regions
 from scraping_scripts import total_cases_scraper as total
 
-
-
 # set json file name
 json_file = '../json_output/data_by_regions.json'
 
@@ -42,7 +40,7 @@ json_regions['data']['regions'][10]['confirmed'] = regions_cases_dict['data'][10
 json_regions['data']['regions'][11]['confirmed'] = regions_cases_dict['data'][11]['confirmed']
 
 # Update updating time
-update_date = str(total_cases_dict['date']['update_hour']) + ' ' + str(total_cases_dict['date']['update_day']) + '-' + str(datetime.today().month) + '-' + str(datetime.today().year)
+update_date = str(regions_cases_dict['date']['update_hour']) + ' ' + str(regions_cases_dict['date']['update_day']) + '-' + str(datetime.today().month) + '-' + str(datetime.today().year)
 json_regions['last_updated'] = update_date
 
 f = open("output.json", "w")
