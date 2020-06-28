@@ -4,12 +4,15 @@ from pprint import pprint
 from operator import itemgetter
 
 #set json file name
-json_file = 'data_by_country.json'
+json_file = '../json_output/data_by_country.json'
+
+# set CSSE dir path
+csse_dir = '/Users/q-beast/Desktop/covidata-Automation/COVID-19/csse_covid_19_data/csse_covid_19_time_series/'
 
 #set file path
-confirmed_file = '/Users/q-beast/Desktop/Covidata/Q-Beast_covid/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'
-deaths_file = '/Users/q-beast/Desktop/Covidata/Q-Beast_covid/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
-recovered_file = '/Users/q-beast/Desktop/Covidata/Q-Beast_covid/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv'
+confirmed_file = csse_dir + 'time_series_covid19_confirmed_global.csv'
+deaths_file = csse_dir + 'time_series_covid19_deaths_global.csv'
+recovered_file = csse_dir + 'time_series_covid19_recovered_global.csv'
 
 #init data lists
 confirmed_data = []
