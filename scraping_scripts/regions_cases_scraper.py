@@ -42,37 +42,37 @@ def regions_cases_scraper():
                 "region_name_en": "Béni Mellal-Khénifra",
                 "region_code": "MA05",
                 "region_name_ar": "بني ملال - خنيفرة",
-                "confirmed": lst[6]
+                "confirmed": lst[9]
             },
             {
                 "region_name_en": "Casablanca-Settat",
                 "region_code": "MA06",
                 "region_name_ar": "الدار البيضاء - سطات",
-                "confirmed": lst[0]
+                "confirmed": lst[2]
             },
             {
                 "region_name_en": "Drâa-Tafilalet",
                 "region_code": "MA08",
                 "region_name_ar": "درعة تافيلالت",
-                "confirmed": lst[9]
+                "confirmed": lst[10]
             },
             {
                 "region_name_en": "Dakhla-Oued Ed-Dahab",
                 "region_code": "MA12",
                 "region_name_ar": "الداخلة - وادي الذهب",
-                "confirmed": lst[7]
+                "confirmed": lst[11]
             },
             {
                 "region_name_en": "Fès-Meknès",
                 "region_code": "MA03",
                 "region_name_ar": "فاس - مكناس",
-                "confirmed": lst[3]
+                "confirmed": lst[4]
             },
             {
                 "region_name_en": "Guelmim-Oued Noun",
                 "region_code": "MA10",
                 "region_name_ar": "كلميم - واد نون",
-                "confirmed": lst[8]
+                "confirmed": lst[6]
             },
             {
                 "region_name_en": "Laâyoune-Sakia El Hamra",
@@ -84,13 +84,13 @@ def regions_cases_scraper():
                 "region_name_en": "Marrakech-Safi",
                 "region_code": "MA07",
                 "region_name_ar": "مراكش - أسفي",
-                "confirmed": lst[4]
+                "confirmed": lst[3]
             },
             {
                 "region_name_en": "l'Oriental",
                 "region_code": "MA02",
                 "region_name_ar": "الجهة الشرقية",
-                "confirmed": lst[10]
+                "confirmed": lst[8]
             },
             {
                 "region_name_en": "Rabat-Salé-Kénitra",
@@ -102,13 +102,13 @@ def regions_cases_scraper():
                 "region_name_en": "Souss-Massa",
                 "region_code": "MA09",
                 "region_name_ar": "سوس - ماسة",
-                "confirmed": lst[11]
+                "confirmed": lst[7]
             },
             {
                 "region_name_en": "Tanger-Tétouan-Al Hoceïma",
                 "region_code": "MA01",
                 "region_name_ar": "طنجة - تطوان - الحسيمة",
-                "confirmed": lst[2]
+                "confirmed": lst[0]
             },
         ]
     }
