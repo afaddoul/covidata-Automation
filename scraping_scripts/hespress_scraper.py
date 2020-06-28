@@ -21,7 +21,10 @@ lst = []
 for row in rows:
     row = row.text.replace("<h4 class=\"mb-0 font-30\">", "")
     row = row.replace("</h4>", "")
-    lst.append(int(row))
+    if (row.isnumeric()):
+        lst.append(int(row))
+    else:
+        lst.append(0)
 
 # Get total Update date
 rows = soup.findAll('span', attrs={'class': 'font-13'})
@@ -47,16 +50,29 @@ rows = soup.findAll('span')
 rows = [rows[2], rows[5], rows[8], rows[11], rows[14]]
 lst = []
 for row in rows:
-    row = row.text.replace("i>", "").split()
-    lst.append(int(row[0]))
+    row = row.text.replace("i>", "").split()[0]
+    if (row.isnumeric()):
+        lst.append(int(row[0]))
+    else:
+        lst.append(0)
+
+# Get total Update date
+rows = soup.findAll('span', attrs={'class': 'font-13'})
+row = rows[0].text.split()
 
 # Create daily properties dictionnary
 daily_properties = {
-    "daily_confirmed": lst[0],
-    "daily_excluded": lst[1],
-    "daily_recovered": lst[2],
-    "daily_deaths": lst[3],
-    "daily_under_treatment": lst[4]
+    "date": {
+        "update_day": row[3],
+        "update_hour": row[6]
+    },
+    "data": {
+        "daily_confirmed": lst[0],
+        "daily_excluded": lst[1],
+        "daily_recovered": lst[2],
+        "daily_deaths": lst[3],
+        "daily_under_treatment": lst[4]
+    }
 }
 
 #*******************************REGIONS PROPERTIES*******************************#
