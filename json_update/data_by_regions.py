@@ -44,5 +44,5 @@ update_date = str(regions_cases_dict['date']['update_hour']) + ' ' + str(regions
 json_regions['last_updated'] = update_date
 
 f = open("output.json", "w")
-json_countries = json.dump(json_regions, f, indent=4, sort_keys=True, ensure_ascii=False)
+json.dump(json_regions, f, indent=4, sort_keys=True, ensure_ascii=False)
 f.close()
